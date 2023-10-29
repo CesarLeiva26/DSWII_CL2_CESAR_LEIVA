@@ -1,0 +1,13 @@
+CREATE TABLE Producto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    descripcion VARCHAR(100),
+    cantidad INT,
+    fechaVencimiento DATE
+);
+
+INSERT INTO Producto (nombre, descripcion, cantidad, fechaVencimiento) VALUES
+    ('Leche Entera', 'Leche Gloria, 1 litro', 120, '2023-12-31'),
+    ('Yogur de Fresa', 'Yogur de Fresa, 150 g', 80, '2024-11-30'),
+    ('Queso', 'Queso Laive, 90 g', 75, '2023-12-31'),
+    ('Mantequilla', 'Mantequilla Laive, 100 g', 60, '2024-10-15');

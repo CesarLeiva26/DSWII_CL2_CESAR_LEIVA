@@ -22,6 +22,21 @@ public class ProductoService {
         return productoRepository.save(producto);
     }
 
+    public Optional<Producto> obtenerProductoPorId(Integer id) {
+        return productoRepository.findById(id);
+    }
 
+    public List<Producto> obtenerProductosPorNombre(String filtro) {
+        return productoRepository.filtrarProductoNombre(filtro);
+    }
+    public void eliminarProducto(Integer id) {
+        productoRepository.deleteById(id);
+    }
 
+    public List<Producto> consultarProductosEntre10Y100() {
+        return productoRepository.findProductosEntre10Y100();
+    }
+    public List<Producto> consultarProductosConVencimiento2024() {
+        return productoRepository.findProductosVencen2024();
+    }
 }
